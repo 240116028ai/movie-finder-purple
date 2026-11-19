@@ -1,0 +1,16 @@
+{
+  "watchlist": [
+    {
+      "title": "Love",
+      "year": "2015",
+      "rating": "6.1",
+      "id": 1
+    },
+    {
+      "title": "Spiderman",
+      "year": "1990",
+      "rating": "5.8",
+      "id": 2
+    }
+  ]
+}

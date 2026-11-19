@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Find movie details and save favorites to your local watchlist."
+    />
+    <meta name="theme-color" content="#1a0b2e" />
+    <title>Secure Movie Finder</title>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="intro">
+        <p class="eyebrow">YOUR NEXT MOVIE NIGHT</p>
+        <h1>Secure <span>Movie Finder</span></h1>
+        <p class="intro-copy">
+          Find your next favorite, then save it to your watchlist.
+        </p>
+      </header>
+
+      <section class="search-panel" aria-label="Search for a movie">
+        <form id="search-form">
+          <label for="movie-title">Movie title</label>
+          <div class="search-row">
+            <input
+              id="movie-title"
+              name="title"
+              type="search"
+              placeholder="Try a movie title..."
+              autocomplete="off"
+              required
+            />
+            <button class="button button-primary" type="submit">
+              Search Movie
+            </button>
+          </div>
+        </form>
+
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+
+        <article id="movie-result" class="result-card" aria-live="polite" hidden>
+          <div class="result-heading">
+            <p class="eyebrow">MOVIE DETAILS</p>
+            <h2 id="result-title"></h2>
+          </div>
+          <div class="rating">
+            <span class="rating-label">IMDb Rating</span>
+            <strong><span id="result-rating"></span><span class="rating-max"> / 10</span></strong>
+          </div>
+          <div class="plot">
+            <h3>Plot description</h3>
+            <p id="result-plot"></p>
+          </div>
+          <button id="watchlist-button" class="button button-watchlist" type="button" hidden>
+            Add to Watchlist
+          </button>
+        </article>
+      </section>
+
+      <footer>Movie data powered by OMDb</footer>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
